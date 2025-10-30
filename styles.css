@@ -1,180 +1,87 @@
-/* --- CORE STYLES --- */
-body {
-    background-color: #0b0a16; 
-    color: #ffffff;
-    font-family: sans-serif;
+body{
+    margin:0;
+    border-radius: 0;
 }
 
-.brainwave-feature-section {
-    max-width: 1400px;
-    margin: 0 auto;
+
+main{
+    background-color:black;
+    width:100%;
+    height:595px;
 }
 
-.section-title {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 5rem;
-    line-height: 1.2;
-}
-
-/* --- BOOTSTRAP CAROUSEL OVERRIDES (The main trick) --- */
-
-#featureCarousel {
-    overflow: hidden;
-}
-
-/* Make each carousel item only take up 33.33% of the container (Desktop View) */
-.carousel-inner .carousel-item {
+.navbar {
     display: flex;
-    float: left;
-    width: 33.333% !important; 
-    margin-right: -33.333%; /* Pull back the slides to fit 3 in the viewport */
-    transition: transform 0.6s ease-in-out;
-}
-
-/* On mobile, revert to standard 1 slide per view */
-@media (max-width: 991px) {
-    .carousel-inner .carousel-item {
-        width: 100% !important;
-        margin-right: 0 !important;
-    }
-}
-
-/* Custom indicator (dot) styling to match the screenshot */
-.custom-indicators {
-    position: static; /* Move dots out of the bottom of the carousel area */
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.custom-indicators button {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 0 6px;
-    background-color: rgba(255, 255, 255, 0.3); /* Inactive dot color */
-    opacity: 1;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.custom-indicators .active {
-    background-color: #ffffff; /* Active dot color */
-}
-
-/* --- FEATURE CARD STYLES --- */
-
-.feature-card {
-    background-color: #121021; 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 30px;
-    margin: 0 15px; /* Spacing between cards */
-    text-align: left;
-    height: 350px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-}
+    padding: 12px 40px;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #f0f0f0;
+    width:100%;
+    height:85px;
+  }
 
-.card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.card-description {
-    color: #a0a0a0;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.card-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
+  .nav-left {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
+    gap: 8px;
+  }
 
-.explore-link {
-    display: inline-flex;
-    align-items: center;
+  .logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  .brand-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    padding-right: 50px;
+  }
+
+  .nav-links a {
     text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    margin-top: 30px;
-    color: #fff;
-    transition: color 0.3s ease;
-}
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-.arrow-icon {
-    margin-left: 5px;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
+  .nav-links a:hover {
+    color: #000;
+  }
 
-.explore-link:hover .arrow-icon {
-    transform: translateX(5px);
-}
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right:65px;
+  }
 
-/* --- COLOR AND GLOW EFFECTS --- */
+  .signin {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
 
-/* Purple Card */
-.card-purple {
-    box-shadow: 0 0 40px rgba(138, 43, 226, 0.4);
-}
-.icon-purple { background-color: #8a2be2; }
-.card-purple::after {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    border-radius: 12px;
-    background: radial-gradient(circle at 120% 120%, rgba(138, 43, 226, 0.2) 0%, transparent 40%);
-    z-index: 1;
-}
+  .get-demo {
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+  }
 
-/* Orange Card */
-.card-orange {
-    box-shadow: 0 0 40px rgba(255, 165, 0, 0.4);
-}
-.icon-orange { background-color: #ff9900; }
-.card-orange::after {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    border-radius: 12px;
-    background: radial-gradient(circle at 120% 120%, rgba(255, 165, 0, 0.2) 0%, transparent 40%);
-    z-index: 1;
-}
-
-/* Green Card */
-.card-green {
-    box-shadow: 0 0 40px rgba(0, 128, 0, 0.4);
-}
-.icon-green { background-color: #008000; }
-.card-green::after {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    border-radius: 12px;
-    background: radial-gradient(circle at 120% 120%, rgba(0, 128, 0, 0.2) 0%, transparent 40%);
-    z-index: 1;
-}
-
-/* Red Placeholder Card */
-.card-red-placeholder {
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
-}
-.icon-red { background-color: #ff0000; }
-.card-red-placeholder::after {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    border-radius: 12px;
-    background: radial-gradient(circle at 120% 120%, rgba(255, 0, 0, 0.2) 0%, transparent 40%);
-    z-index: 1;
-}
+  .get-demo:hover {
+    border-color: #000;
+  }

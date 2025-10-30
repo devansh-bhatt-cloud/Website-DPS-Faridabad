@@ -5,82 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
+    
 </head>
 <body>
-<nav>
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="your-logo-path.png" alt="ChronoTask Logo" class="logo">
+    <span class="brand-name">ChronoTask</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Solutions</a></li>
+    <li><a href="#">Resources</a></li>
+    <li><a href="#">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="signin">Sign in</a>
+    <button class="get-demo">Get demo</button>
+  </div>
 </nav>
 <main>
 </main> 
-<div class="brainwave-feature-section container-fluid py-5">
-
-    <h2 class="section-title text-center mb-5">Chat Smarter, Not Harder<br>with Brainwave</h2>
-
-    <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
-        
-        <div class="carousel-indicators custom-indicators">
-            <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-
-        <div class="carousel-inner custom-carousel-inner mx-auto">
-
-            <div class="carousel-item active">
-                <div class="feature-card card-purple">
-                    <div class="card-content">
-                        <div class="card-icon icon-purple">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16"><path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.286-1.296.544-2.228.71l-1.4 1.4L.3 14.333V8a8 8 0 0 1 15.7-2.333zM7 8a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2H7zM10 8a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2h-1z"/></svg>
-                        </div>
-                        <h3 class="card-title">Ask anything</h3>
-                        <p class="card-description">Lets users quickly find answers to their questions without having to search through multiple sources.</p>
-                        <a href="#" class="explore-link">EXPLORE MORE <span class="arrow-icon">&gt;</span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="feature-card card-orange">
-                    <div class="card-content">
-                        <div class="card-icon icon-orange">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm10 2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2z"/></svg>
-                        </div>
-                        <h3 class="card-title">Improve everyday</h3>
-                        <p class="card-description">The app uses natural language processing to understand user queries and provide accurate and...</p>
-                        <a href="#" class="explore-link">EXPLORE MORE <span class="arrow-icon">&gt;</span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="feature-card card-green">
-                    <div class="card-content">
-                        <div class="card-icon icon-green">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16"><path d="M15.352 1.838a.5.5 0 0 0-.012-.047l-.924-1.74a.5.5 0 0 0-.877.464l.942 1.777c-2.88 1.48-5.353 3.657-7.234 6.225.26.176.518.375.75.6l.015.018.397.434a.5.5 0 0 0 .768-.636l-.37-.406a12.8 12.8 0 0 1-1.02-.98.5.5 0 0 0-.75.64l.37.406c1.17 1.282 2.657 2.404 4.316 3.298a.5.5 0 0 0 .767-.636l-.398-.434a11.8 11.8 0 0 0-.75-.6c1.554-.83 3.097-1.9 4.542-3.15.244-.21.464-.447.653-.7.18-.25.333-.518.46-.796.126-.277.235-.572.327-.874.092-.302.162-.609.215-.919.053-.31.082-.625.082-.943s-.029-.633-.082-.943z"/></svg>
-                        </div>
-                        <h3 class="card-title">Connect everywhere</h3>
-                        <p class="card-description">Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.</p>
-                        <a href="#" class="explore-link">EXPLORE MORE <span class="arrow-icon">&gt;</span></a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="carousel-item">
-                <div class="feature-card card-red-placeholder">
-                    <div class="card-content">
-                        <div class="card-icon icon-red">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-speedometer2" viewBox="0 0 16 16"><path d="M8 11.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/><path d="M3.732 1.074a.5.5 0 0 1-.722.052l-2.062 1.547a.5.5 0 1 1-.64-.852l2.062-1.547a.5.5 0 0 1 .069-.691l.013-.017a.5.5 0 0 1 .722-.051z"/><path d="M12.268 1.074a.5.5 0 0 0 .722.052l2.062 1.547a.5.5 0 1 0 .64-.852l-2.062-1.547a.5.5 0 0 0-.069-.691l-.013-.017a.5.5 0 0 0-.722.051z"/><path d="M0 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H.5A.5.5 0 0 1 0 8zm13.5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/></svg>
-                        </div>
-                        <h3 class="card-title">Fast results</h3>
-                        <p class="card-description">Placeholder to replicate the design layout with four cards.</p>
-                        <a href="#" class="explore-link">EXPLORE MORE <span class="arrow-icon">&gt;</span></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
+<script src="script.js"></script>
 </body>
 </html>

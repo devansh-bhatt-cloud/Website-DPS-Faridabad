@@ -1,1 +1,338 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    scroll-behavior: smooth; /* Smooth scrolling when using anchor links */
+}
+/* --- 2. Header Navigation --- */
+/* --- 2. Header Navigation --- */
+.main-header {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1400px;
+    background: rgba(15, 15, 15, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 10px 20px;
+    z-index: 100;
+}
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    /* In real project, replace 'C' with your <svg> or <img> logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-primary);
+}
+/* Specific styles for each section */
+#hero-section {
+    background-color: #e0f2f7; /* Light blue from your image */
+    display: flex; /* Adjust to match the internal layout */
+    align-items: flex-start; /* Align content to the top within the section */
+    padding-top: 80px; /* More space at the top */
+}
+
+#hero-section .content-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#hero-section .text-content {
+    flex: 1;
+}
+
+#hero-section .image-stats-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hero-section img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stat {
+    text-align: center;
+}
+.stat h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #007bff; /* Example blue */
+}
+.stat p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+#team-section {
+    background-color: #ffffff; /* White from your image */
+    flex-direction: column; /* Stack content vertically */
+}
+
+#team-section .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for team members */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.team-member img {
+    width: 120px; /* Example size */
+    height: 120px;
+    border-radius: 50%; /* Circular images */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+#vision-mission-section {
+    background-color: #f8f8f8; /* Light grey from your image */
+}
+
+#vision-mission-section .content-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#vision-mission-section .vision,
+#vision-mission-section .mission {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+
+#footer-section {
+    background-color: #0000ff; /* Dark blue from your image */
+    color: #fff;
+    padding: 60px 20px;
+    min-height: auto; /* Footer shouldn't necessarily take full viewport height */
+}
+
+#footer-section .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#101010
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.newsletter h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.newsletter button {
+    background-color: #ffc107; /* Yellow button */
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.company-info {
+    flex: 2;
+}
+
+.footer-links {
+    display: flex;
+    flex: 3;
+    gap: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.legal-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 768px) {
+    #hero-section .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats-box {
+        grid-template-columns: 1fr;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #vision-mission-section .content-wrapper {
+        flex-direction: column;
+    }
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .newsletter form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .newsletter input[type="email"] {
+        width: calc(100% - 30px); /* Adjust for padding */
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-links div {
+        width: 100%;
+        text-align: center;
+    }
+    .copyright {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .legal-links a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}/* Add to style.css for initial hiding and animation */
+.page-section.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below its final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.page-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -3,84 +3,11 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f8f8f8;
-    scroll-behavior: smooth; /* Smooth scrolling when using anchor links */
+    scroll-behavior: smooth;
+    border-radius: 0; /* Smooth scrolling when using anchor links */
 }
 /* --- 2. Header Navigation --- */
 /* --- 2. Header Navigation --- */
-.main-header {
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    max-width: 1400px;
-    background: #f8f8f8; /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 10px 20px;
-    z-index: 100;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--text-primary);
-    /* In real project, replace 'C' with your <svg> or <img> logo */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--text-primary);
-}
-/* Specific styles for each section */
-#hero-section {
-    background-color: #e0f2f7; /* Light blue from your image */
-    display: flex; /* Adjust to match the internal layout */
-    align-items: flex-start; /* Align content to the top within the section */
-    padding-top: 80px; /* More space at the top */
-}
-
-#hero-section .content-wrapper {
-    display: flex;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-#hero-section .text-content {
-    flex: 1;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -118,16 +45,36 @@ body {
     padding-right: 50px;
   }
 
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 600;
-  }
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-  .nav-links a:hover {
-    color: #000;
-  }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+.nav-links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
 
   .nav-right {
     display: flex;
@@ -142,7 +89,7 @@ body {
     font-size: 14px;
   }
 
-  .get-demo {
+.get-demo {
     padding: 8px 18px;
     font-size: 14px;
     font-weight: 500;
@@ -151,11 +98,32 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
-  }
+    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.get-demo:hover {
+    color: blue;
+    border-color: blue;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.6);
+}
+/* Specific styles for each section */
+#hero-section {
+    background-color: #e0f2f7; /* Light blue from your image */
+    display: flex; /* Adjust to match the internal layout */
+    align-items: flex-start; /* Align content to the top within the section */
+    padding-top: 80px; /* More space at the top */
+}
 
-  .get-demo:hover {
-    border-color: #000;
-  }
+#hero-section .content-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#hero-section .text-content {
+    flex: 1;
+}
 
 #hero-section .image-stats-content {
     flex: 1;
@@ -173,7 +141,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    background-color:#f8f8f8;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -194,7 +162,7 @@ body {
 
 
 #team-section {
-    background-color: #f8f8f8; /* White from your image */
+    background-color: #ffffff; /* White from your image */
     flex-direction: column; /* Stack content vertically */
 }
 
@@ -212,7 +180,7 @@ body {
 }
 
 .team-member {
-    background-color: #f8f8f8;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -248,7 +216,7 @@ body {
 
 
 #footer-section {
-    background-color:black 
+    background-color: #0000ff; /* Dark blue from your image */
     color: #fff;
     padding: 60px 20px;
     min-height: auto; /* Footer shouldn't necessarily take full viewport height */

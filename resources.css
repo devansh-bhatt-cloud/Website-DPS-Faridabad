@@ -1,0 +1,154 @@
+body{
+    margin:0;
+    border-radius: 0;
+}
+
+
+main{
+    background-color:black;
+    width:100%;
+    height:595px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #f0f0f0;
+    width:100%;
+    height:55px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-left:40px;
+  }
+
+  .brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #111;
+    font-family:'sans-serif', monospace;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    padding-right: 100px;
+  }
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+.nav-links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+footer.footer {
+  background-image: url('https://wallpaperbat.com/img/848319-blue-8k-wallpaper-top-free-blue-8k-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 80px 100px;
+  border-radius: 0px;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.footer-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+}
+
+.footer-subtext {
+  color: grey;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.get-started {
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.get-started:hover {
+  background-color: #e6e6e6;
+}
+
+.watch-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.3s;
+}
+
+.watch-link:hover {
+  opacity: 0.8;
+}
